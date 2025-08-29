@@ -27,8 +27,8 @@ export default function DashboardPage() {
                   <th className="px-4 py-3 text-left font-medium">Email</th>
                   <th className="px-4 py-3 text-left font-medium">Job-Position</th>
                   <th className="px-4 py-3 text-left font-medium">Job-Type</th>
-                    <th className="px-4 py-3 text-left font-medium">Cv</th>
-                  <th className="px-4 py-3 text-left font-medium">Report</th>
+                    {/* <th className="px-4 py-3 text-left font-medium">Cv</th>
+                  <th className="px-4 py-3 text-left font-medium">Report</th> */}
                 </tr>
               </thead>
               <tbody>
@@ -43,12 +43,12 @@ export default function DashboardPage() {
                     <td className="px-4 py-3">{r.email}</td>
                      <td className="px-4 py-3">{r.position}</td>
                       <td className="px-4 py-3">{r.jobType}</td>
-                    <td className="px-4 py-3">
+                    {/* <td className="px-4 py-3">
                       <span className="rounded-full bg-indigo-600/20 px-2 py-1 text-xs text-indigo-300">
                         {r.cv}
                       </span>
                     </td>
-                    <td className="px-4 py-3 text-gray-400">{r.report}</td>
+                    <td className="px-4 py-3 text-gray-400">{r.report}</td> */}
                   </tr>
                 ))}
               </tbody>
