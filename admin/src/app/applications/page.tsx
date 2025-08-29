@@ -8,7 +8,7 @@ export default function ApplicationsPage() {
   return (
     <div className="space-y-6">
       <header className="flex items-center justify-between">
-        <h2 className="text-lg font-semibold">Applications</h2>
+        <h2 className="text-2xl font-semibold">Applications</h2>
         {/* <div className="flex gap-2">
           <input
             placeholder="Search applicant..."
@@ -47,10 +47,10 @@ export default function ApplicationsPage() {
                 <td className="px-4 py-3 text-right">
                   <div className="inline-flex gap-2">
                
-                    <button className="rounded-lg border border-gray-800 px-3 py-1.5 hover:bg-gray-800">
+                    <button className="rounded-lg border border-purple-800 px-3 py-1.5 hover:bg-gray-800">
                       View Report
                     </button>
-                    <button className="rounded-lg bg-indigo-600 px-3 py-1.5 text-white hover:bg-indigo-700">
+                     <button className="rounded-lg border border-red-800 px-3 py-1.5 hover:bg-red-800">
                      Delete
                     </button>
                   </div>

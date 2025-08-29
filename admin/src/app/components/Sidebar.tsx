@@ -18,8 +18,12 @@ const navItems: NavItem[] = [
 ];
 
 export default function Sidebar() {
-  const pathname = usePathname();
+  
   const [open, setOpen] = useState(true);
+  const pathname = usePathname();
+   if (pathname === "/") {
+    return null;
+  }
 
   return (
     <aside
@@ -29,8 +33,8 @@ export default function Sidebar() {
     >
       {/* Header / Toggle */}
       <div className="flex items-center justify-between px-3 py-3 border-b border-gray-800">
-        <span className={`font-semibold tracking-wide ${open ? "block" : "hidden"}`}>
-          AI Interview Admin
+        <span className={`font-semibold text-purple-100 text-xl tracking-wide ${open ? "block" : "hidden"}`}>
+          SmartHire - Admin
         </span>
         <button
           onClick={() => setOpen((p) => !p)}

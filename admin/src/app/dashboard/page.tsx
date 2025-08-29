@@ -63,7 +63,7 @@ export default function DashboardPage() {
 
 function Card({ title, value, delta }: { title: string; value: string; delta?: string }) {
   return (
-    <div className="rounded-2xl border border-gray-800 bg-gray-900 p-4 py-8">
+    <div className="rounded-2xl border border-purple-900 bg-gray-900 p-4 py-8">
       <div className="text-xl text-gray-400">{title}</div>
       <div className="mt-2 flex items-end justify-between">
         <div className="text-2xl font-semibold">{value}</div>
