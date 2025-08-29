@@ -7,14 +7,16 @@ export default function LoginPage() {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
+  const [correct, setCorrect] = useState("")
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
 
     // Dummy check (replace with API/auth logic)
     if (username === "admin" && password === "admin123") {
-      alert("✅ Login Successful!");
-      window.location.href = "/admin"; // redirect
+      setCorrect("✅ Login Successful!")
+      // alert("✅ Login Successful!");
+      window.location.href = "/dashboard"; // redirect
     } else {
       setError("Invalid username or password.");
     }
@@ -24,12 +26,17 @@ export default function LoginPage() {
     <div className="flex min-h-screen items-center justify-center bg-gray-950">
       <div className="w-full max-w-md rounded-2xl bg-gray-900 p-8 shadow-xl border border-gray-800">
         <h2 className="mb-6 text-center text-2xl font-bold text-white">
-          Admin Panel Login
+          Admin Panel - SmartHire
         </h2>
 
         {error && (
           <div className="mb-4 rounded-lg bg-red-900/40 border border-red-700 p-3 text-sm text-red-300">
             {error}
+          </div>
+        )}
+              {correct && (
+          <div className="mb-4 rounded-lg bg-green-900/40 border border-green-700 p-3 text-sm text-green-300">
+            {correct}
           </div>
         )}
 
