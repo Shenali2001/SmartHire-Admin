@@ -38,6 +38,7 @@ export default function Sidebar() {
 
   const navItems: NavItem[] = [
     { label: "Dashboard", href: "/dashboard" },
+    { label: "Job Type", href: "/job-type" },
     { label: "Job Posting", href: "/job-postings" },
     { label: "Applications", href: "/applications" },
     { label: "Users", href: "/users" },
