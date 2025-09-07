@@ -4,18 +4,18 @@ import { useEffect, useMemo, useState } from "react";
 import { usePathname, useRouter } from "next/navigation";
 import Sidebar from "./components/Sidebar";
 
-const LOGIN_ROUTE = "/";                   // your login page
-const TOKEN_KEY = "access_token";         // where you save the token
+const LOGIN_ROUTE = "/";                  
+const TOKEN_KEY = "access_token";      
 
 export default function ClientLayout({ children }: { children: React.ReactNode }) {
   const pathname = usePathname();
   const router = useRouter();
 
-  // Whether the current path is considered public (no auth required)
+
   const isPublic = useMemo(() => pathname === LOGIN_ROUTE, [pathname]);
 
-  const [checked, setChecked] = useState(false); // finished checking token
-  const [authed, setAuthed] = useState(false);   // has token?
+  const [checked, setChecked] = useState(false); 
+  const [authed, setAuthed] = useState(false);   
 
   useEffect(() => {
     // LocalStorage exists only on client
